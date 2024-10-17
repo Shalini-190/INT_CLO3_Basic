@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HopeWorks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            background-position: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1em 2em;
+            font-size: 1rem;
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin: 0.5rem;
+            width: 45%;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #28a745;
+        }
+
+        .btn-secondary:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+       .btn-logout {
+            margin-top: 20px;
+            background-color: #dc3545; /* Bootstrap danger color */
+            color: white;
+        }
+        .btn-logout:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Profile, {{ username }}</h1>
+    
+        <h3>User Information</h3>
+        <p><strong>Username:</strong> {{ username }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+    
+    
+        <h3>Session Status</h3>
+        <p><strong>Logged In:</strong> Yes</p>
+        <p><strong>Token Exists:</strong> Yes</p>
+        <div>
+            <!-- Button to Donate Page -->
+            <button class="btn btn-primary" onclick="window.location.href='/donation'">Make a Donation</button>
+    
+            <!-- Button to Volunteer Page -->
+            <button class="btn btn-secondary" onclick="window.location.href='/volunteers'">Become a Volunteer</button>
+    
+            <!-- Logout Button -->
+            <button class="btn btn-logout" onclick="window.location.href='/signout'">Logout</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 HopeWorks - Together for a Better Tomorrow</p>
+    </div>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
